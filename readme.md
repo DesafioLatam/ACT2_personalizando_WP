@@ -1,43 +1,81 @@
-<section>
-<a href="http://desafiolatam.com"><img src="http://blog.desafiolatam.com/wp-content/uploads/2015/03/logo_latam_mini.png" width="100" style="float:right"></a>
+# Optimización y deployment de Wordpress
 
-# Actividad Presencial 1 de Wordpress 3.
+Para la siguiente actividad, debes clonar este repositorio y trabajar leyendo atentamente las siguientes instrucciones:
 
-<https://github.com/DesafioLatam/Blearning-Frontend-E25CP1A1>
+Es importante que hayas visto toda la experiencia online para trabajar en esta actividad.
 
-Tiene un cliente que necesita un cambio de servidor. El webmaster anterior del sitio les envió los archivos y la base de datos del sitio.
+## Instrucciones
 
-El cliente está muy preocupado por su sitio debido a que no estaba funcionando bien y necesita una actualización de todos sus componentes.
+Una destacada productora necesita de ayuda con su sitio web de forma urgente, sobre todo ahora que lograron conseguir el tan esperado concierto de Maluma y muchos de sus usuarios ingresan para obtener información. Uno de sus principales problemas es que el landing page que les desarrollaron no carga de manera rápida ni óptima. Además, necesitan incorporarle seguridad por si los malintencionados hackers deciden entrar a modificar el sitio. Finalmente, quieren añadir ciertas funcionalidades que el desarrollador anterior no supo lograr.
 
-Te dicen que no tienen presupuesto para mejorar el sitio ahora, pero que necesita un reporte técnico y un presupuesto con todas las mejoras necesarias. Algunos de los elementos que te pide considerar son: 
+Las funcionalidades que te piden considerar son:
 
-- Elementos del sitio actual que no funcionan bien
-- Agregar un blog de noticias en la página de inicio, 
-- Cambiar el contenido de todo el sitio, por el que te va a enviar
-- Crear una página nueva con un portafolio con todos sus clientes, con filtro según industria a la que pertenecen. 
+- Servicios:
+	- En el menú de administración cambiar el nombre de "entradas" por "servicios" y cambiar el ícono del [pin](https://developer.wordpress.org/resource/dashicons/#admin-post) por el ícono de [smiley](https://developer.wordpress.org/resource/dashicons/#smiley) (el editor se confunde siempre por culpa de eso).
+	- En la sección "Servicios" ordenar los post de forma ascendente (Servicio Nº1 primero, Servicio Nº9 al final).
+	- Incorporar una imagen por defecto (`default.jpg`) a los post de servicios que no tengan imagen destacada.
+	- Que al clickear cada contenedor del post de servicio, envíe a otra página con el detalle completo del servicio.
+- Fotos:
+	- Que el editor pueda incluir las imágenes de la sección "Fotos" de forma dinámica
+	- Que las fotos y sus títulos estén ordenadas de forma aleatoria
+	- Que cada foto subida a esa sección tenga la misma proporción, de aspecto 4:3.
+		- > HINT: El aspecto de proporción debe estar bien definido para que las formas (video digital, lienzo, diseño receptivo, imagen, entre otros) se adapten de la mejor forma a los medios. Te dejamos una [calculadora de proporciones](https://calculateaspectratio.com) con la cual trabajar.
+- Clientes:
+	- Añadir una sección llamada "Clientes" que esté entre las secciones de "Fotos" y "Contacto".
+	- Que la sección clientes tenga como background la imagen `background_maluma.jpg` y que tenga como título "Confiaron en nosotros".
+	- Subir los logotipos de los clientes de forma dinámica para que el editor pueda agregar más en el futuro.
+- Contacto:
+	- Reemplazar el formulario estático por un formulario dinámico que envíe un correo al mail de contacto de la productora cada vez busque un servicio.
+	- Que en el formulario de contacto haya un campo de tipo "select" con los servicios ofrecidos.
+- Otros:
+	- Generar un footer fijo con el link a las redes sociales de Instagram y Facebook.
+	- Incorporar Google Analytics para analizar el tráfico del sitio (este [plugin](https://es.wordpress.org/plugins/google-analytics-for-wordpress/) te puede ayudar, recuerda siempre leer la [documentación](https://www.monsterinsights.com/docs/connect-google-analytics/))
 
-Lo que requieren de momento es mejorar la seguridad del sitio e instalarlo en el nuevo servidor. 
+Además, el cliente te solicita un reporte técnico y un presupuesto con todas las mejoras necesarias.
 
-## Deployment de Wordpress
+## ¿Qué debes hacer?
 
-- Instale el sitio en su servidor
-- La contraseña del usuario no la tiene, debe generar una desde la Base de Datos
+- Instalar el sitio en el servidor local
 
-> HINT: Su cliente le dice que no sabe el usuario pero que encontró estas instrucciones en Internet, pero no logró entenderlas <https://www.webempresa.com/blog/cambiar-la-contrasena-de-administrador-en-wordpress.html>
+- Desarrollar los cambios solicitados por el cliente.
 
-- Genera un reporte en un archivo .pdf que contenga
-	- Detalle de todos los problemas del sitio (Tanto de frontend como de backend) que usted estima conveniente arreglar, qué archivos específicos tendría que intervenir y elementos que necesitaría agregar. 
-	- Descripción técnica del trabjo que significa realizar los cambios solicitados por el cliente.
-	- Tiempos de desarrollo
-	- Presupuesto itemizado
+- Agregar seguridad adicional al sitio web
 
->HINT: Se recomienda para este tipo de presupuestos calcular el tiempo estimado específico de cada arreglo y, a partir de eso, cobrar a partir las horas que se van a utilizar según la "Hora Hombre" que estime convenientes cobrar. Un desarrollador Wordpress Junior puede ganar desde 0.4UF-1UF/hora
+- Hacer un deploy manual del sitio web
 
-- Realiza actualización de WP y componentes.
+- Revisar si el rendimiento del sitio usando [GT Metrix](https://gtmetrix.com/)
 
->HINT: ¿Problemas al actualizar? Siempre hay que tener cuidado cuando se realiza una actualización de Wordpress cuando se trabaja con una plantilla, porque puede suceder que algunos componentes dejen de funcionar. Compartimos la versión actualizada de la plantilla para ver si se puede solucionar. En caso de no contar con la actualización de la plantilla hay que volver a la versión de Wordpress que se estaba utilizando. ¿Puedo volver atrás una actualización? ¿Cómo?
+  - Tomar un screenshot del resultado
 
-- Agregue seguridad adicional del sitio
-- Utilizando el plugin Duplicator migre al servidor final.
+- Optimizar el sitio usando plugins de Wordpress
+
+- Revisar nuevamente rendimiento del sitio usando [GT Metrix](https://gtmetrix.com/)
+
+  - Tomar un screenshot del resultado
+
+Al finalizar, genera un reporte en un archivo **README.md** que contenga:
+
+- El detalle de todos los problemas del sitio *(tanto de frontend como de backend)* que estimes conveniente arreglar, además los archivos específicos que deberías intervenir y elementos que necesitarías agregar.
+
+- Descripción técnica del trabajo que significa realizar los cambios solicitados por el cliente
+
+- Tiempos de desarrollo
+
+- Presupuesto itemizado
+
+  - > HINT: Se recomienda para este tipo de presupuestos calcular el tiempo estimado específico de cada arreglo y, a partir de eso, cobrar las horas que se van a utilizar según la "Hora Hombre" que estimes conveniente cobrar. Un desarrollador Wordpress Junior puede ganar desde 0.4 UF a 1UF por hora.
+
+- Mostrar los screnshots con el antes y después de la optimización del sitio web
+
+# Entrega desafío
+
+- Crea una carpeta que contenga:
+
+  - El archivo **README.md** con el reporte del sitio web
+  - La carpeta **wp-content** y la **[base de datos en formato `.sql`](https://cl.godaddy.com/help/exportar-mis-bases-de-datos-mysql-1487)**
+
+- Todos los archivos mencionados anteriormente deberán ser **versionados vía push en GitHub**, y luego subidos a la [plataforma empieza](http://empieza.desafiolatam.com/)
 
 
+
+  #### **¡Vamos con todo!**
